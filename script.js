@@ -72,3 +72,27 @@ function radioCheck(){
 function clearText(){
     document.getElementById("textIn").value = "";
 }
+
+function checkMobile(){
+    if (detectmob == true){
+        document.getElementById("teste").innerHTML = "IS MOBILE";
+    }else{
+        document.getElementById("teste").innerHTML = "NOT IS MOBILE";
+    }
+}
+
+function detectmob() { 
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+       return true;
+    }
+    else {
+       return false;
+    }
+}
