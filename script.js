@@ -79,20 +79,20 @@ function checkMobile(){
     }else{
         document.getElementById("teste").innerHTML = "NOT IS MOBILE";
     }
+    var totLargura = window.innerWidth;
+    var relLargura = screen.width;
+    var totAltura = window.innerHeight;
+    var relAltura = screen.height;
+    document.getElementById("largura").innerHTML = totLargura + " -=- " + relLargura;
+    document.getElementById("altura").innerHTML = totAltura + " -=- " + relAltura;
 }
 
 function detectmob() { 
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-       return true;
-    }
-    else {
-       return false;
-    }
+    function detectmob() {
+        if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+          return true;
+        } else {
+          return false;
+        }
+     }
 }
