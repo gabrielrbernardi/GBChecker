@@ -80,9 +80,9 @@ body{
     max-width: 70vw;
     min-width: 50vw;
     min-height: 30vh;
-    background-color: #dbdbdb;
+    background-color: grey;
     border: none;
-    color: black;
+    color: white;
 }
 
 .header{
