@@ -1,14 +1,27 @@
-.geral{
+html{
+    margin: 0;
+    /* padding: 0 0 10px 0; */
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: Amazon Ember Regular, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #0e171e;
+    color: #949494;
+    margin-bottom: 20px;
     text-align: center;
+    text-decoration: none;
+    /* text-align: center;
     background-color: #0e171e;
     font-family: Amazon Ember Regular, Arial, sans-serif;
     font-size: 16px;
     position: initial;
     top: 0;
     left: 0;
-    /* transform: translate(-50%, -50%); */
     overflow-y: visible;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 }
 
 body{
@@ -22,7 +35,26 @@ body{
 .color_link{
     color: #f1f1f1;
     cursor: default;
+    text-decoration: none;
+    transition: .2s;
     /* text-align: center; */
+}
+
+.color_link1{
+    color: #f1f1f1;
+    cursor: default;
+    text-decoration: none;
+    transition: .2s;
+    /* text-align: center; */
+}
+
+.color_link:hover{
+    opacity: 0.6;
+}
+
+.color_link1:hover{
+    opacity: 0.6;
+    cursor: pointer
 }
 
 .uppercase{
@@ -33,10 +65,24 @@ body{
     text-transform: capitalize;
 }
 
-#textIn, #textOut{
-    /* max-width: 900px; */
-    min-width: 500px;
-    min-height: 150px;
+.lowercase{
+    text-transform: lowercase;
+}
+
+.textIn{
+    max-width: 70vw;
+    min-width: 50vw;
+    min-height: 30vh;
+    border: none;
+}
+
+.textOut{
+    max-width: 70vw;
+    min-width: 50vw;
+    min-height: 30vh;
+    background-color: grey;
+    border: none;
+    color: white;
 }
 
 .header{
@@ -67,12 +113,12 @@ body{
 
 .footer{
     background-color: #0d1b31;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 0;
     display: block;
-    position: static;
+    position: fixed;
     bottom: 0;
     z-index: 1;
     text-align: center;
@@ -96,4 +142,13 @@ body{
 
 .container{
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+    #textIn, #textOut{
+        /* max-width: 900px; */
+        min-width: 70vw;
+        min-height: 20vh;
+        max-width: 90vw;
+    }
 }
