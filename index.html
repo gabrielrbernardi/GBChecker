@@ -1,0 +1,51 @@
+<html onselectstart="return false;">
+    <head>
+        <title>GB Checker</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="geral">
+        <header class="header">
+            <div class="drawLine"></div>
+            <a class="color_link">GB Checker</a>
+            <div class="drawLine"></div>
+        </header>
+        <a class="color_link uppercase">check length</a><br>
+        <a class="color_link">Digite o tamanho maximo do texto: </a>
+        <input id="tamMax" type="text" autocomplete="off"><br><br>
+
+        <a class="color_link">Selecione o tipo de tratamento</a><br>
+
+        <a class="color_link uppercase">entrada</a><br>
+        <textarea type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" autofocus></textarea><br>
+        <!-- <button type="button" onkeyup="strLenth()">Calcular tamanho</button> -->
+        <a class="color_link">Tamanho atual: </a> 
+        <a class="color_link" id="res">Size of text above</a><br>
+        <a class="color_link">Status: </a>
+        <a class="color_link" id="status">out</a><br>
+        <button type="button" id="btnClear" class="button" onclick="clearText()">Clear</button>
+        <br>
+        <a class="color_link">Possui saida?</a><br>
+        <input type="radio" name="out" value="nao" id="out-1" autocomplete="off"><a class="color_link capitalize">nao</a>
+        <input type="radio" name="out" value="sim" id="out-2" autocomplete="off"><a class="color_link capitalize">sim</a>
+        <br>
+        <button type="button" class="button" onclick="checkOut()">Submit</button><br>
+        <div class="container" id="container">
+            <a class="color_link">Selecione o tipo de saida</a><br>
+            <input type="radio" name="type" value="none" id="data-1" autocomplete="off"><a class="color_link">None</a>
+            <input type="radio" name="type" value="uppercase" id="data-2" autocomplete="off"><a class="color_link">Uppercase</a>
+            <input type="radio" name="type" value="lowercase" id="data-3" autocomplete="off"><a class="color_link">Lowercase</a>
+            <br>
+            <a class="color_link uppercase">saida</a><br>
+            <textarea type="text" id="textOut" placeholder="Saida" autocomplete="off" readonly></textarea><br>
+            <button type="button" class="button" onclick="radioCheck()">submit</button>
+        </div>
+        <footer class="footer">
+            <a class="footer_text" href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a>
+            <a class="footer_text" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a>
+            <!-- <a class="footer_text" href="error.html">Help</a> -->
+                <a>&copy; 2019, Gabriel Bernardi</a>
+        </footer>
+    </body>
+    
+    <script src="script.js"></script>
+</html>
