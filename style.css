@@ -144,7 +144,7 @@ body{
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     #textIn, #textOut{
         /* max-width: 900px; */
         min-width: 70vw;
