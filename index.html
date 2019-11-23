@@ -5,20 +5,26 @@
     </head>
     <body>
         <header class="header">
-            <div class="drawLine"></div>
-            <a href="#" class="color_link1">GB Checker</a>
-            <div class="drawLine"></div>
+            <span class="div" onclick="redirect()">
+                <div class="drawLine"></div>
+                <div href="#" class="color_link1">GB Checker</div>
+                <div class="drawLine"></div>
+            </span>
+            <script>
+                function redirect(){
+                    location.replace("#");
+                }
+            </script>
         </header>
-        <a class="color_link" id="teste">TESTE</a><br>
-        <a class="color_link" id="largura">LARG</a><br>
-        <a class="color_link" id="altura">ALT</a><br>
-        <button type="button" class="button" onclick="checkMobile()">CHECK</button><br>
+        <div class="alert">
+            Este site é melhor visualizado no computador!
+          </div>
+
         <a class="color_link uppercase">check length</a><br>
         <a class="color_link">Digite o tamanho maximo do texto: </a>
         <input id="tamMax" type="text" autocomplete="off"><br><br>
 
         <a class="color_link">Selecione o tipo de tratamento</a><br>
-
         <a class="color_link uppercase">entrada</a><br>
         <textarea class="textIn" type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
         <!-- <button type="button" onkeyup="strLenth()">Calcular tamanho</button> -->
@@ -50,6 +56,5 @@
                 <!-- <a class="footer_text" href="error.html">Help</a> -->
                     <a>&copy; 2019, Gabriel Bernardi</a>
             </footer>
-    
     <script src="script.js"></script>
 </html>

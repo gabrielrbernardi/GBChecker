@@ -72,27 +72,3 @@ function radioCheck(){
 function clearText(){
     document.getElementById("textIn").value = "";
 }
-
-function checkMobile(){
-    if (detectmob == true){
-        document.getElementById("teste").innerHTML = "IS MOBILE";
-    }else{
-        document.getElementById("teste").innerHTML = "NOT IS MOBILE";
-    }
-    var totLargura = window.innerWidth;
-    var relLargura = screen.width;
-    var totAltura = window.innerHeight;
-    var relAltura = screen.height;
-    document.getElementById("largura").innerHTML = totLargura + " -=- " + relLargura;
-    document.getElementById("altura").innerHTML = totAltura + " -=- " + relAltura;
-}
-
-function detectmob() { 
-    function detectmob() {
-        if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-          return true;
-        } else {
-          return false;
-        }
-     }
-}
