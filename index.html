@@ -1,5 +1,7 @@
 <html onselectstart="return false;">
     <head>
+        <meta charset="utd-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport">
         <title>GB Checker</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -16,36 +18,38 @@
                 }
             </script>
         </header>
-        <div class="alert">
+        <!-- <div class="alert">
             Este site é melhor visualizado no computador!
-          </div>
+        </div> -->
 
         <a class="color_link uppercase">check length</a><br>
-        <a class="color_link">Digite o tamanho maximo do texto: </a>
-        <input id="tamMax" type="text" autocomplete="off"><br><br>
+        <a class="color_link">Digite o tamanho máximo do texto: </a>
+        <input class="input" id="tamMax" type="text" autocomplete="off"><br><br>
 
-        <a class="color_link">Selecione o tipo de tratamento</a><br>
+        <!-- <a class="color_link">Selecione o tipo de tratamento</a><br> -->
         <a class="color_link uppercase">entrada</a><br>
-        <textarea class="textIn" type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
+        <textarea class="textIn" type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
         <!-- <button type="button" onkeyup="strLenth()">Calcular tamanho</button> -->
         <a class="color_link">Tamanho atual: </a> 
-        <a class="color_link" id="res">Size of text above</a><br>
+        <a class="color_link" id="res">Size of text above</a>
+        <a class="color_link" id="maxValue">/ 10000</a><br>
         <a class="color_link">Status: </a>
         <a class="color_link" id="status">out</a><br>
         <button type="button" id="btnClear" class="button" onclick="clearText()">Clear</button>
         <br>
         <a class="color_link">Possui saida?</a><br>
-        <input type="radio" name="out" value="nao" id="out-1" autocomplete="off" onclick="checkOut()"><a class="color_link capitalize">nao</a>
-        <input type="radio" name="out" value="sim" id="out-2" autocomplete="off" onclick="checkOut()"><a class="color_link capitalize">sim</a>
+        <input type="radio" name="out" value="nao" id="out-1" autocomplete="off" onclick="checkOut()"><label for="out-1" class="color_link capitalize">não</label>
+        <input type="radio" name="out" value="sim" id="out-2" autocomplete="off" onclick="checkOut()"><label for="out-2" class="color_link capitalize">sim</label>
         <br>
         <!-- <button type="button" class="button" onclick="checkOut()">Submit</button><br> -->
         <div class="container" id="container">
-            <a class="color_link">Selecione o tipo de saida</a><br>
-            <input type="radio" name="type" value="none" id="data-1" autocomplete="off"><a class="color_link">None</a>
-            <input type="radio" name="type" value="uppercase" id="data-2" autocomplete="off"><a class="color_link uppercase">Uppercase</a>
-            <input type="radio" name="type" value="lowercase" id="data-3" autocomplete="off"><a class="color_link lowercase">Lowercase</a>
+            <a class="color_link">Selecione o tipo de saída</a><br>
+            <input type="radio" name="type" value="none" id="data-1" autocomplete="off" onclick="radioCheck()"><label for="data-1" class="color_link">None</label>
+            <input type="radio" name="type" value="uppercase" id="data-2" autocomplete="off" onclick="radioCheck()"><label for="data-2" class="color_link uppercase">Uppercase</label>
+            <input type="radio" name="type" value="lowercase" id="data-3" autocomplete="off" onclick="radioCheck()"><label for="data-3" class="color_link lowercase">Lowercase</label>
+            <input type="radio" name="type" value="capitalize" id="data-4" autocomplete="off" onclick="radioCheck()"><label for="data-4" class="color_link capitalize">Capitalize</label>
             <br>
-            <a class="color_link uppercase">saida</a><br>
+            <a class="color_link uppercase">saída</a><br>
             <textarea class="textOut" type="text" id="textOut" placeholder="Saida" autocomplete="off" readonly title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
             <button type="button" class="button" onclick="radioCheck()">Enviar</button>
         </div>
@@ -54,7 +58,7 @@
                 <a class="footer_text" href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a>
                 <a class="footer_text" href="https://github.com/gabrielrbernardi/GBChecker" target="_blank">GB Checker</a>
                 <!-- <a class="footer_text" href="error.html">Help</a> -->
-                    <a>&copy; 2019, Gabriel Bernardi</a>
+                    <a>&copy; 2019 - 2020, Gabriel Bernardi</a>
             </footer>
     <script src="script.js"></script>
 </html>

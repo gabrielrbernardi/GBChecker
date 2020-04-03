@@ -28,7 +28,7 @@ body{
     margin: 0;
     font-family: Amazon Ember Regular, Arial, sans-serif;
     font-size: 16px;
-    background-color: #0e171e;
+    background-color: #253949;
     color: #949494;
 }
 
@@ -72,17 +72,22 @@ body{
 .textIn{
     max-width: 70vw;
     min-width: 50vw;
-    min-height: 30vh;
-    border: none;
+    min-height: 20vh;
+    /* border: none; */
+    background-color: #597f9e;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #00c3ff;
 }
 
 .textOut{
     max-width: 70vw;
     min-width: 50vw;
-    min-height: 30vh;
-    background-color: #cccccc;
-    border: none;
-    /* color: white; */
+    min-height: 20vh;
+    background-color: #2f4455;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #00c3ff;
 }
 
 .header{
@@ -144,15 +149,6 @@ body{
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
-    #textIn, #textOut{
-        /* max-width: 900px; */
-        min-width: 70vw;
-        min-height: 20vh;
-        max-width: 90vw;
-    }
-}
-
 .alert {
     padding: 5px;
     background-color: #c5a100; /* Red */
@@ -173,4 +169,27 @@ body{
 
 .div:hover{
     opacity: 0.6;
+}
+
+.input{
+    width: 10vw;
+    padding: 4px 0px;
+    /* margin: -1vw; */
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 7.5px;
+    margin-right: 0.5vw;
+    
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    border-radius: 0px;
+    outline: none;
+    
+    font-size: 16px;
+}
+
+.input:hover, .input:focus{
+    border-bottom: 1px solid rgb(33, 150, 243);
 }

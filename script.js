@@ -16,6 +16,10 @@ function strLenth(){
             document.getElementById("status").style.color = "rgb(255, 0, 0)";
         }
     }
+    if(tam >= 10000){
+        alert("Tamanho máximo atingido");
+        document.getElementById("textIn").disabled=true;
+    }
     document.getElementById("res").innerHTML = tam;
 }
 
@@ -63,11 +67,17 @@ function radioCheck(){
     }else if(choose == "lowercase"){
         var content = x.toLowerCase();
         document.getElementById("textOut").value = content;
+        // console.log(content)
+    }else if(choose == "capitalize"){
+        var content = x.capitalize(); 
+        document.getElementById("textOut").value = content;
     }
     
-    // document.getElementById("textOut").value = radios[i].value;
-
 }
+
+String.prototype.capitalize = function() {
+    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+};
 
 function clearText(){
     document.getElementById("textIn").value = "";
