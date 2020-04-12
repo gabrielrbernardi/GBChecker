@@ -13,7 +13,7 @@ function strLenth(){
             document.getElementById("status").style.color = "rgb(27, 255, 35)";
         }else{
             document.getElementById("status").innerHTML = "FORA do permitido";
-            document.getElementById("status").style.color = "rgb(255, 0, 0)";
+            document.getElementById("status").style.color = "rgb(255, 78, 37)";
         }
     }
     if(tam >= 10000){
@@ -73,6 +73,56 @@ function radioCheck(){
         document.getElementById("textOut").value = content;
     }
     
+}
+function checkType(){
+    document.getElementById("selectTypeDiv").style.fontSize = "100%";
+    var options = document.getElementsByName("type1");
+    var choose;
+    for(var i = 0; i < options.length; i++){
+        if(options[i].checked){
+            choose = options[i].value;
+            break;
+        }
+    }
+    if(choose == "compare"){
+        document.getElementById("checkLengthDiv").style.display = "none";
+        document.getElementById("checkTextDiv").style.display = "inline";
+    }else{
+        document.getElementById("checkLengthDiv").style.display = "inline";
+        document.getElementById("checkTextDiv").style.display = "none";
+    }
+}
+
+function checkStrings(){
+    if(checkTypeIgnore()){
+        var string1 = document.getElementById("textOneCompare").value.toLowerCase();
+        var string2 = document.getElementById("textTwoCompare").value.toLowerCase();
+    }else{
+        var string1 = document.getElementById("textOneCompare").value;
+        var string2 = document.getElementById("textTwoCompare").value;
+    }
+    if(string1 == string2){
+        document.getElementById("resCompare").innerHTML = "Iguais";
+        document.getElementById("resCompare").style.color = "rgb(27, 255, 35)";
+    }else{
+        document.getElementById("resCompare").innerHTML = "Diferentes";
+        document.getElementById("resCompare").style.color = "rgb(255, 78, 37)";
+    }
+}
+function checkTypeIgnore(){
+    var options = document.getElementsByName("type2");
+    var choose;
+    for(var i = 0; i < options.length; i++){
+        if(options[i].checked){
+            choose = options[i].value;
+            break;
+        }
+    }
+    if(choose == "compareYes"){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 String.prototype.capitalize = function() {

@@ -74,7 +74,18 @@ body{
     min-width: 50vw;
     min-height: 20vh;
     /* border: none; */
-    background-color: #597f9e;
+    background-color: #235177;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #00c3ff;
+}
+
+.textInCompare{
+    max-width: 48vw;
+    min-width: 30vw;
+    min-height: 15vh;
+    /* border: none; */
+    background-color: #235177;
     color: white;
     border-radius: 5px;
     border: 2px solid #00c3ff;
@@ -192,4 +203,12 @@ body{
 
 .input:hover, .input:focus{
     border-bottom: 1px solid rgb(33, 150, 243);
+}
+
+.mainDiv{
+    display: none;
+}
+
+.selectType{
+    font-size: 175%;
 }

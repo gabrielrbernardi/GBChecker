@@ -21,37 +21,55 @@
         <!-- <div class="alert">
             Este site é melhor visualizado no computador!
         </div> -->
-
-        <a class="color_link uppercase">check length</a><br>
-        <a class="color_link">Digite o tamanho máximo do texto: </a>
-        <input class="input" id="tamMax" type="text" autocomplete="off"><br><br>
-
-        <!-- <a class="color_link">Selecione o tipo de tratamento</a><br> -->
-        <a class="color_link uppercase">entrada</a><br>
-        <textarea class="textIn" type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
-        <!-- <button type="button" onkeyup="strLenth()">Calcular tamanho</button> -->
-        <a class="color_link">Tamanho atual: </a> 
-        <a class="color_link" id="res">Size of text above</a>
-        <a class="color_link" id="maxValue">/ 10000</a><br>
-        <a class="color_link">Status: </a>
-        <a class="color_link" id="status">out</a><br>
-        <button type="button" id="btnClear" class="button" onclick="clearText()">Clear</button>
-        <br>
-        <a class="color_link">Possui saida?</a><br>
-        <input type="radio" name="out" value="nao" id="out-1" autocomplete="off" onclick="checkOut()"><label for="out-1" class="color_link capitalize">não</label>
-        <input type="radio" name="out" value="sim" id="out-2" autocomplete="off" onclick="checkOut()"><label for="out-2" class="color_link capitalize">sim</label>
-        <br>
-        <!-- <button type="button" class="button" onclick="checkOut()">Submit</button><br> -->
-        <div class="container" id="container">
-            <a class="color_link">Selecione o tipo de saída</a><br>
-            <input type="radio" name="type" value="none" id="data-1" autocomplete="off" onclick="radioCheck()"><label for="data-1" class="color_link">None</label>
-            <input type="radio" name="type" value="uppercase" id="data-2" autocomplete="off" onclick="radioCheck()"><label for="data-2" class="color_link uppercase">Uppercase</label>
-            <input type="radio" name="type" value="lowercase" id="data-3" autocomplete="off" onclick="radioCheck()"><label for="data-3" class="color_link lowercase">Lowercase</label>
-            <input type="radio" name="type" value="capitalize" id="data-4" autocomplete="off" onclick="radioCheck()"><label for="data-4" class="color_link capitalize">Capitalize</label>
+        
+        <div class="selectType" id="selectTypeDiv">
+            <a class="color_link">Escolha uma das opções abaixo:</a><br>
+            <input type="radio" name="type1" id="compare" value="compare" autocomplete="off" onclick="checkType()"><label class="color_link capitalize" for="compare">compare texts</label>
+            <input type="radio" name="type1" id="checkLength" value="checkLength" autocomplete="off" onclick="checkType()"><label class="color_link capitalize" for="checkLength">check length</label>
+        </div>
+        <div class="mainDiv" id="checkLengthDiv">
             <br>
-            <a class="color_link uppercase">saída</a><br>
-            <textarea class="textOut" type="text" id="textOut" placeholder="Saida" autocomplete="off" readonly title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
-            <button type="button" class="button" onclick="radioCheck()">Enviar</button>
+            <a class="color_link uppercase">check length</a><br>
+            <a class="color_link">Digite o tamanho máximo do texto: </a>
+            <input class="input" id="tamMax" type="text" autocomplete="off"><br><br>
+
+            <!-- <a class="color_link">Selecione o tipo de tratamento</a><br> -->
+            <a class="color_link uppercase">entrada</a><br>
+            <textarea class="textIn" type="text" id="textIn" placeholder="Digite o texto" autocomplete="off" onkeyup="strLenth()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
+            <!-- <button type="button" onkeyup="strLenth()">Calcular tamanho</button> -->
+            <a class="color_link">Tamanho atual: </a> 
+            <a class="color_link" id="res">Size of text above</a>
+            <a class="color_link" id="maxValue">/ 10000</a><br>
+            <a class="color_link">Status: </a>
+            <a class="color_link" id="status">out</a><br>
+            <button type="button" id="btnClear" class="button" onclick="clearText()">Clear</button>
+            <br>
+            <a class="color_link">Possui saida?</a><br>
+            <input type="radio" name="out" value="nao" id="out-1" autocomplete="off" onclick="checkOut()"><label for="out-1" class="color_link capitalize">não</label>
+            <input type="radio" name="out" value="sim" id="out-2" autocomplete="off" onclick="checkOut()"><label for="out-2" class="color_link capitalize">sim</label>
+            <br>
+            <!-- <button type="button" class="button" onclick="checkOut()">Submit</button><br> -->
+            <div class="container" id="container">
+                <a class="color_link">Selecione o tipo de saída</a><br>
+                <input type="radio" name="type" value="none" id="data-1" autocomplete="off" onclick="radioCheck()"><label for="data-1" class="color_link">None</label>
+                <input type="radio" name="type" value="uppercase" id="data-2" autocomplete="off" onclick="radioCheck()"><label for="data-2" class="color_link uppercase">Uppercase</label>
+                <input type="radio" name="type" value="lowercase" id="data-3" autocomplete="off" onclick="radioCheck()"><label for="data-3" class="color_link lowercase">Lowercase</label>
+                <input type="radio" name="type" value="capitalize" id="data-4" autocomplete="off" onclick="radioCheck()"><label for="data-4" class="color_link capitalize">Capitalize</label>
+                <br>
+                <a class="color_link uppercase">saída</a><br>
+                <textarea class="textOut" type="text" id="textOut" placeholder="Saida" autocomplete="off" readonly title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
+                <button type="button" class="button" onclick="radioCheck()">Enviar</button>
+            </div>
+        </div>
+        <div class="mainDiv" id="checkTextDiv">
+            <a class="color_link1 capitalize">ignore case?</a>
+            <input type="radio" name="type2" id="compare1" value="compareYes" autocomplete="off" onclick="checkTypeIgnore(), checkStrings()"><label class="color_link capitalize" for="compare1">yes</label>
+            <input type="radio" name="type2" id="compare2" value="compareNo" autocomplete="off" onclick="checkTypeIgnore(), checkStrings()"><label class="color_link capitalize" for="compare2">no</label>
+            <br>
+            <textarea class="textInCompare" type="text" id="textOneCompare" placeholder="Digite o primeiro texto" autocomplete="off" onkeyup="checkStrings()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea>
+            <textarea class="textInCompare" type="text" id="textTwoCompare" placeholder="Digite o segundo texto" autocomplete="off" onkeyup="checkStrings()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea>
+            <br>
+            <a class="color_link" style="font-size: 120%;" id="resCompare"></a>
         </div>
     </body>
             <footer class="footer">
