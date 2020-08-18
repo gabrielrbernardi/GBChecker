@@ -21,6 +21,8 @@ function strLenth(){
         document.getElementById("textIn").disabled=true;
     }
     document.getElementById("res").innerHTML = tam;
+    stringWSpaces = x.replace(/ /g, "");
+    document.getElementById("resWSpaces").innerHTML = stringWSpaces.length;
 }
 
 //Autocheck first checkbox
@@ -131,4 +133,9 @@ String.prototype.capitalize = function() {
 
 function clearText(){
     document.getElementById("textIn").value = "";
+}
+
+function clearText1(){
+    document.getElementById("textOneCompare").value = "";
+    document.getElementById("textTwoCompare").value = "";
 }

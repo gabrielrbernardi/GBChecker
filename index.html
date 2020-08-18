@@ -31,7 +31,7 @@
             <br>
             <a class="color_link uppercase">check length</a><br>
             <a class="color_link">Digite o tamanho máximo do texto: </a>
-            <input class="input" id="tamMax" type="text" autocomplete="off"><br><br>
+            <input class="input" id="tamMax" type="text" autocomplete="off" onkeyup="strLenth()"><br><br>
 
             <!-- <a class="color_link">Selecione o tipo de tratamento</a><br> -->
             <a class="color_link uppercase">entrada</a><br>
@@ -42,7 +42,12 @@
             <a class="color_link" id="maxValue">/ 10000</a><br>
             <a class="color_link">Status: </a>
             <a class="color_link" id="status">out</a><br>
-            <button type="button" id="btnClear" class="button" onclick="clearText()">Clear</button>
+            
+            <a class="color_link">Tamanho atual sem espaços: </a> 
+            <a class="color_link" id="resWSpaces">Size of text above</a>
+            <a class="color_link" id="maxValue">/ 10000</a><br>
+
+            <button type="button" id="btnClear" class="button" onclick="clearText()">Limpar</button>
             <br>
             <a class="color_link">Possui saida?</a><br>
             <input type="radio" name="out" value="nao" id="out-1" autocomplete="off" onclick="checkOut()"><label for="out-1" class="color_link capitalize">não</label>
@@ -58,7 +63,7 @@
                 <br>
                 <a class="color_link uppercase">saída</a><br>
                 <textarea class="textOut" type="text" id="textOut" placeholder="Saida" autocomplete="off" readonly title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea><br>
-                <button type="button" class="button" onclick="radioCheck()">Enviar</button>
+                <button type="button" class="button" onclick="radioCheck()">Atualizar</button>
             </div>
         </div>
         <div class="mainDiv" id="checkTextDiv">
@@ -69,6 +74,7 @@
             <textarea class="textInCompare" type="text" id="textOneCompare" placeholder="Digite o primeiro texto" autocomplete="off" onkeyup="checkStrings()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea>
             <textarea class="textInCompare" type="text" id="textTwoCompare" placeholder="Digite o segundo texto" autocomplete="off" onkeyup="checkStrings()" maxlength="10000" autofocus title="Voce pode redimensionar essa caixa de texto&#013You can resize this text box"></textarea>
             <br>
+            <button type="button" id="btnClear" class="button" onclick="clearText1()">Limpar</button><br>
             <a class="color_link" style="font-size: 120%;" id="resCompare"></a>
         </div>
     </body>
