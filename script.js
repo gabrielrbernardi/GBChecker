@@ -16,7 +16,7 @@ function strLenth(){
             document.getElementById("status").style.color = "rgb(255, 78, 37)";
         }
     }
-    if(tam >= 10000){
+    if(tam >= 100000){
         alert("Tamanho máximo atingido");
         document.getElementById("textIn").disabled=true;
     }
